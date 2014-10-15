@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>..:: Živé Ryby Vratimov - Galerie ::..</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+		<!-- Google Analyst-->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-29404704-1']);
+			_gaq.push(['_setDomainName', 'ziveryby-vratimov.cz']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+		<!-- nivo slider - async load-->
+		<script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript">
+			var sliderImages = ['images/11.jpg', 'images/12.jpg', 'images/13.jpg', 'images/14.jpg', 'images/15.jpg', 'images/16.jpg', 'images/17.jpg', 'images/18.jpg', 'images/19.jpg', 'images/20.jpg'];
+			var imagesLoaded = 1;
+			//set to one as the first image is loaded with the page
+
+			$(document).ready(function() {
+				for (i in sliderImages) {
+					//create new img element
+					var img = $('<img></img>').attr('src', sliderImages[i]).attr('id', 'sliderImg_' + i);
+
+					//append to slider wrapper
+					$('#sliderWrapper').append(img);
+
+					//after image is loaded increase the counter,
+					//it will tell us when to start slider
+					$('#sliderImg_' + i).load(function() {
+						imagesLoaded += 1;
+					});
+				}
+
+				//after inserting images run nivo slider
+				runNivoSlider();
+			});
+
+			function runNivoSlider() {
+				if (imagesLoaded == $('#sliderWrapper img').length) {
+					//all images are loaded, we can run nivo slider
+					$('#sliderWrapper').nivoSlider();
+				} else {
+					//something is still missing try in 300 ms
+					setTimeout(function() {
+						runNivoSlider();
+					}, 10);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="bg_top">
+			<div id="main">
+				<!-- header begins -->
+				<div id="logo">
+					<a href="#">Živé Ryby Vratimov</a>
+					<h2><a href="#" id="metamorph">... vždy čerstvé.</a></h2>
+				</div>
+				<div id="buttons">
+					<ul>
+						<!--<li><a href="./index.html"  title="">Úvod</a></li> -->
+						<li>
+							<a class="orange" href="./prodejna.html"  title="">Prodejna Vratimov</a>
+						</li>
+						<li>
+							<a style="color: #FF6600;" href="./benatky.html" title="">Rybo-Park Benátky</a>
+						</li>
+						<li>
+							<a href="./cenik.html" title="">Ceník</a>
+						</li>
+						<li >
+							<a href="./provoznidoba.html" title="">Provozní doba</a>
+						</li>
+						<li >
+							<a href="./galerie.html" title="">Galerie</a>
+						</li>
+						<li >
+							<a class="first" href="./kontakt.html" title="">Kontakt</a>
+						</li>
+					</ul>
+				</div>
+				<div id="header">
+					<div id="wrapper">
+						<div id="slider-wrapper">
+							<div id="slider" class="nivoSlider">
+								<dir id="sliderWrapper">
+									<img src="images/10.jpg" alt="" />
+								</dir>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- header ends -->
+				<!-- content begins -->
+
+				<div id="content">
+					<div id="right">
+						<h2>Partneři:</h2>
+						<p>
+							<a href="http://www.restaurace-roubenka.cz/" class="roubenka" target="_blank"></a>
+							<a href="http://www.rybsvaz.cz/" class="rybsvaz" target="_blank"></a>
+							<a href="http://www.pod.cz" class="pod" target="_blank"></a>
+							<a href="http://www.rybarstvi-denas.cz" class="rybarstvi-denas" target="_blank"></a>
+							<a href="http://www.rybnikarstvi-pohorelice.cz" class="rybnikarstvi-pohorelice" target="_blank"></a>
+							<a href="http://www.rybsvaz-ms.cz" class="rybsvaz-ms" target="_blank"></a>
+						</p>
+						</p>
+					</div>
+					<div id="left" >
+						<div class="text">
+							<br />
+							<div>
+								<h1>Kontakt</h1>
+								<span style="margin-left: 20 !important;"> <span> Telefon: 608500402
+										<br/>
+										E-Mail: <a href="mailto:info@ziveryby-vratimov.cz">info@ziveryby-vratimov.cz</a>
+										<br/>
+										<br/>
+										<strong>Prodejna Vratimov</strong>
+										<br />
+										Frýdecká 17/116
+										<br />
+										73932, Vratimov
+										<br />
+										<br />
+                    <div class="nosee">
+    										<strong>RyboPark Benátky</strong>
+    										<br />
+    										Novoveská
+    										<br/>
+    										709 00, Ostrava - Nová Ves
+    										<br/>
+                    </div>
+										<br/>
+										<strong>Provozovatel:</strong>
+										<br />
+										Jakub Vávra
+										<br />
+										Frýdecká 17/116
+										<br />
+										73932, Vratimov
+										<br />
+										Ič: 74084879 </span> <span style="position: relative; top: -200px; left: 300px"> <a target="_blank"
+										href="https://www.facebook.com/ziveryby.vratimov"
+										class="facebook">&nbsp;</a> </span> </span>
+							</div>
+							<div>
+								<p>
+									<strong>Mapa Prodejna Vratimov:</strong><br />
+								</p>
+								<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.cz/maps?hl=cs&amp;q=Fr%C3%BDdeck%C3%A1+17%2F116&amp;ie=UTF8&amp;hq=&amp;hnear=Fr%C3%BDdeck%C3%A1+17%2F116,+739+32+Vratimov&amp;gl=cz&amp;t=m&amp;z=14&amp;brcurrent=5,0,0&amp;ll=49.759406,18.312224&amp;output=embed"></iframe>
+								<br />
+								<small><a target="_blank" href="http://maps.google.cz/maps?hl=cs&amp;q=Fr%C3%BDdeck%C3%A1+17%2F116&amp;ie=UTF8&amp;hq=&amp;hnear=Fr%C3%BDdeck%C3%A1+17%2F116,+739+32+Vratimov&amp;gl=cz&amp;t=m&amp;z=14&amp;brcurrent=5,0,0&amp;ll=49.759406,18.312224&amp;source=embed" style="color:#0000FF;text-align:left">Zvětšit mapu</a></small>
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- content ends -->
+				<!-- footer begins -->
+				<div id="footer">
+					<p>
+						Copyright  2011. Designed by <a href="http://www.metamorphozis.com/free_templates/free_templates.php" title="Free Web Templates">Free Web Templates</a>, coded <a href="http://www.flashtemplatesdesign.com/" title="Free Flash Templates">Free Flash Templates</a>
+					</p>
+					<p>
+						<a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a>
+					</p>
+				</div>
+				<!-- footer ends -->
+			</div>
+		</div>
+
+	</body>
+</html>
