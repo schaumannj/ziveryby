@@ -49,7 +49,7 @@ function initialize() {
 
   
   </script>
-
+<script type="text/javascript" src="lib/util.js"></script>
 <!-- nivo slider - async load-->
 <script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
 <script type="text/javascript" src="lib/jquery.nivo.slider.pack.js"></script>
@@ -72,35 +72,8 @@ $(document).ready(function(){
 
   //after inserting images run nivo slider
   runNivoSlider();
-  //######################## start pop-up window
-function xmas() {
-    //Getting the variable's value from a link 
-    var loginBox = $(this).attr('href');
-    //Fade in the Popup
-    $(loginBox).fadeIn(300);
-    //Set the center alignment padding + border see css style
-    var popMargTop = ($(loginBox).height() + 24) / 2; 
-    var popMargLeft = ($(loginBox).width() + 24) / 2; 
-    $(loginBox).css({ 
-        'margin-top' : -popMargTop,
-        'margin-left' : -popMargLeft       
-    });
-    // Add the mask to body
-    $('body').append('<div id="mask"></div>');
-    $('#mask').fadeIn(300);
-    $(loginBox).css({ 
-        'display' : 'block'       
-    });
-    // When clicking on the button close or the mask layer the popup closed
-    $('a.close, #mask').live('click', function() { 
-      $('#mask , .login-popup').fadeOut(300 , function() {
-        $('#mask').remove();  
-    }); 
-    return false;
-    });
-}
-    //######################## end pop-up window
-});
+  readyHandler();
+  });
 
 function runNivoSlider() {
   if (imagesLoaded == $('#sliderWrapper img').length) {
@@ -155,7 +128,7 @@ animatedcollapse.init()
 
 </head>
 <body onload="initialize()">
-  <!-- pop-up window >
+  <!-- pop-up window -->
   <div id="login-box" class="login-popup">
   <a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
     <div id="letak"></div>
