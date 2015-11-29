@@ -73,6 +73,7 @@ $(document).ready(function(){
   //after inserting images run nivo slider
   runNivoSlider();
   //######################## start pop-up window
+function xmas() {
     //Getting the variable's value from a link 
     var loginBox = $(this).attr('href');
     //Fade in the Popup
@@ -97,6 +98,7 @@ $(document).ready(function(){
     }); 
     return false;
     });
+}
     //######################## end pop-up window
 });
 
@@ -153,7 +155,7 @@ animatedcollapse.init()
 
 </head>
 <body onload="initialize()">
-  <!-- pop-up window -->
+  <!-- pop-up window >
   <div id="login-box" class="login-popup">
   <a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
     <div id="letak"></div>
@@ -169,7 +171,7 @@ animatedcollapse.init()
 		<ul>
 			<!--<li><a href="./index.html"  title="">Úvod</a></li> -->
       <li><a class="orange" href="./prodejna.html"  title="">Prodejna Vratimov</a></li>
-			<li><a class="first orange" href="./benatky.html" title="">RyboPark Benátky</a></li>
+      <li><a class="first" href="./benatky.html" title="">RyboPark Benátky</a></li>
 			<li><a href="./cenik.html" title="">Ceník</a></li>
 			<li><a href="./provoznidoba.html" title="">Provozní doba</a></li>
 			<li><a href="./galerie.html" title="">Galerie</a></li>
