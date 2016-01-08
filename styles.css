@@ -128,7 +128,7 @@ margin: 0 auto;
   height: 29px;
 	background: url(images/menuhover.png) no-repeat;
 }
-#buttons a.orange {
+#buttons a.orange, .pred.orange {
 	color: #FF6600;
 }
 
