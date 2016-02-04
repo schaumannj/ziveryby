@@ -23,47 +23,11 @@
 				s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
-		<script type="text/javascript" src="lib/util.js"></script>
 		<!-- nivo slider - async load-->
 		<script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
 		<script type="text/javascript" src="lib/jquery.nivo.slider.pack.js"></script>
-		<script type="text/javascript">
-			var sliderImages = ['images/11.jpg', 'images/12.jpg', 'images/13.jpg', 'images/14.jpg', 'images/15.jpg', 'images/16.jpg', 'images/17.jpg', 'images/18.jpg', 'images/19.jpg', 'images/20.jpg'];
-			var imagesLoaded = 1;
-			//set to one as the first image is loaded with the page
-
-			$(document).ready(function() {
-				for (i in sliderImages) {
-					//create new img element
-					var img = $('<img></img>').attr('src', sliderImages[i]).attr('id', 'sliderImg_' + i);
-
-					//append to slider wrapper
-					$('#sliderWrapper').append(img);
-
-					//after image is loaded increase the counter,
-					//it will tell us when to start slider
-					$('#sliderImg_' + i).load(function() {
-						imagesLoaded += 1;
-					});
-				}
-
-				//after inserting images run nivo slider
-				runNivoSlider();
-				readyHandler();
-			});
-
-			function runNivoSlider() {
-				if (imagesLoaded == $('#sliderWrapper img').length) {
-					//all images are loaded, we can run nivo slider
-					$('#sliderWrapper').nivoSlider();
-				} else {
-					//something is still missing try in 300 ms
-					setTimeout(function() {
-						runNivoSlider();
-					}, 10);
-				}
-			}
-		</script>
+		<!--custom function-->
+		<script type="text/javascript" src="lib/util.js"></script>
 	</head>
 	<body>
 		<!-- pop-up window-->
@@ -85,7 +49,6 @@
 						<li>
 							<a class="orange" href="./prodejna.html"  title="">Prodejna Vratimov</a>
 						</li>
-						<li><a href="./benatky.html" title="">RyboPark Benátky</a></li>
 						<li>
 							<a href="./cenik.html" title="">Ceník</a>
 						</li>
