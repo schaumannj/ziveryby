@@ -125,6 +125,19 @@ body {
     color: #FF6600;
 }
 
+.green, a.green{
+   color: green;
+   font-size: 18px;
+   padding-left: 25px;
+   padding-top: 15px;
+}
+
+.alert {
+    font-size: xx-large;
+    color: red;
+    padding-left: 55px;
+}
+
 #content {
     width: 980px;
     background: #ffffff;
